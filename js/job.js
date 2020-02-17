@@ -8,9 +8,14 @@ export const JobAPI = superclass =>
         }
 
         async createJob(payload) {
-            const params = { 
+            const params = {
                 ...payload,
-                output: payload.output !== undefined && payload.output !== null ? payload.output ? "1" : "0" : null
+                output:
+                    payload.output !== undefined && payload.output !== null
+                        ? payload.output
+                            ? "1"
+                            : "0"
+                        : null
             };
 
             const response = await this.get(this.baseUrl, { params });
