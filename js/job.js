@@ -7,13 +7,13 @@ export const JobAPI = superclass =>
             return contents;
         }
 
-        async createJob(jobParams, output = false) {
-            const options = { params: {} };
+        async createJob(payload) {
+            const params = { 
+                ...payload,
+                output: payload.output !== undefined && payload.output !== null ? payload.output ? "1" : "0" : null
+            };
 
-            if (output !== undefined && output !== null) options.params.output = output ? "1" : "0";
-            for (const [key, value] of Object.entries(jobParams)) options.params[key] = value;
-
-            const response = await this.get(this.baseUrl, options);
+            const response = await this.get(this.baseUrl, { params });
             return response;
         }
 
