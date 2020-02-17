@@ -8,17 +8,12 @@ export const JobAPI = superclass =>
         }
 
         async createJob(jobParams, output = false) {
-            const url = new URL(this.baseUrl);
+            const options = { params: {} };
 
-            if (output !== undefined && output !== null) {
-                url.searchParams.append("output", output ? "1" : "0");
-            }
+            if (output !== undefined && output !== null) options.params.output = output ? "1" : "0";
+            for (const [key, value] of Object.entries(jobParams)) options.params[key] = value;
 
-            for (const [key, value] of Object.entries(jobParams)) {
-                url.searchParams.append(key, value);
-            }
-
-            const response = await this.get(url);
+            const response = await this.get(this.baseUrl, options);
             return response;
         }
 
