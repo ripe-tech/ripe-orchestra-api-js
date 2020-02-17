@@ -7,13 +7,6 @@ export const JobAPI = superclass =>
             return contents;
         }
 
-        async showJob(id) {
-            const url = `${this.baseUrl}jobs/${id}`;
-
-            const contents = await this.get(url);
-            return contents;
-        }
-
         async createJob(jobParams, output = false) {
             const url = new URL(this.baseUrl);
 
@@ -27,6 +20,13 @@ export const JobAPI = superclass =>
 
             const response = await this.get(url);
             return response;
+        }
+
+        async showJob(id) {
+            const url = `${this.baseUrl}jobs/${id}`;
+
+            const contents = await this.get(url);
+            return contents;
         }
 
         async cancelJob(id) {
