@@ -45,7 +45,7 @@
         "watch": "rollup -c -w"
     },
     "dependencies": {
-        "yonius": "^0.2.19"
+        "yonius": "^0.2.21"
     },
     "devDependencies": {
         "@babel/core": "^7.8.4",
@@ -57,12 +57,12 @@
         "npm-check-updates": "^4.0.1",
         "prettier": "^1.19.1",
         "prettier-config-hive": "^0.1.1",
-        "rollup": "^1.31.0",
+        "rollup": "^1.31.1",
         "rollup-plugin-babel": "^4.3.3",
         "rollup-plugin-commonjs": "^10.1.0",
         "rollup-plugin-node-builtins": "^2.1.2",
         "rollup-plugin-node-globals": "^1.4.0",
         "rollup-plugin-node-resolve": "^5.2.0",
-        "sort-package-json": "^1.39.1"
+        "sort-package-json": "^1.40.0"
     }
 }
