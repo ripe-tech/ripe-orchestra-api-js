@@ -6,13 +6,13 @@ async function run() {
     try {
         console.info(await api.listJobs());
     } catch (err) {
-        console.error(`[ERROR] ${err.code || ""} ${err.message}`)
+        console.error(`[ERROR] ${err.code || ""} ${err.message}`);
     }
 
     try {
         console.info(await api.listNodes());
     } catch (err) {
-        console.error(`[ERROR] ${err.code || ""} ${err.message}`)
+        console.error(`[ERROR] ${err.code || ""} ${err.message}`);
     }
 }
 
