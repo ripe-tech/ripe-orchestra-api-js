@@ -1,6 +1,6 @@
 {
     "name": "ripe-orchestra-api",
-    "version": "0.2.0",
+    "version": "0.2.1",
     "description": "The RIPE Orchestra API client",
     "keywords": [
         "api",
