@@ -10,13 +10,5 @@ node_js:
 install:
   - npm install
 script: npm run lint && npm run build && npm test
-before_deploy: npm run build
-deploy:
-  provider: npm
-  email: development@platforme.com
-  skip_cleanup: true
-  api_key:
-    secure: OqHxeSdubRuTiAh/400uDvTUoBCPIDVwzTChcr0FR36VyivZmId8OyGxYLiAe3srvURsE72WhVFa+z6+uXU5Dz9VfpJsar90mZNWDCkqQp+HsAvglhfJv+rGioHjhenqGSNq6laNgArurrhe1EbvLE1W9pYrfnaaTBedu7CvJfhw0YKkB4WUktJaxEpUWcqy7UEE4UtqFhJKD0EpGY8/Ghshtn1hvpB2jy9qxksvM/1Xjup7xjKL9QBBDEdBxgtfgrlDicFCA+2NNgMmABIHxQTyhOuE6R7LcWQZ1VdbGtBNR2ZOlTL6YVMKA3wgRO54wNZDMlH9Eipwti6wVdl9A+qlCrFwYBL2sZjuMuqGLwLWrsbtozAay6iQNuutCEGJf9meicVMdg6WMtfBPO4uqp05AV3Qcc+2tvSjuir8iSurh23vTNV0q8oK4heQlMxJ+/4+h2we6dRlmv+M2LmrGasj71+EtKiapHoMKO6vMr6EH5/KMa/DDP/und/8/xWJrJ+gDg8VzmLmHvnQSd/GPT3ziiMMlixPAhAnwO1MeYLjQ5NRCcw5UCg/eRwsdGAydkCOjXpufM7wDMnuzJQDS3ZjEZzaZzZHSSxEWkdrsrV3GLH294yZ2z+TmWVznridNLyMclHTkfoHQB4ju8WfZwj39r+BmSyWL7RDNOCPYME=
-  on:
-    tags: true
-    node_js: "10"
+cache:
+  npm: false
