@@ -20,7 +20,7 @@ export const JobAPI = superclass =>
             return response;
         }
 
-        async showJob(id) {
+        async getJob(id) {
             const url = `${this.baseUrl}jobs/${id}`;
             const contents = await this.get(url);
             return contents;
